@@ -1,0 +1,74 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# next.js
+.next/
+out/
+build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+logs
+*.log
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc.local
+
+# turbo
+.turbo
+
+# React native
+.expo/
+dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# yarn 2
+.pnp.*
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Env files
+.env*
+!.env.example
+
+# Optional eslint cache
+.eslintcache
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
