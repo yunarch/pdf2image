@@ -39,7 +39,7 @@ jobs:
         with:
           header: pr-title-lint-error
           delete: true
-  # Set up tests
+  # Set up ci
   set_up:
     name: Set up
     runs-on: ubuntu-latest
