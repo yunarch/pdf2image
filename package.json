@@ -31,7 +31,7 @@
     "@mui/icons-material": "^5.13.7",
     "@mui/material": "^5.13.7",
     "jszip": "^3.10.1",
-    "next": "13.4.3",
+    "next": "13.4.9",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^2.16.105",
     "react": "^18.2.0",
