@@ -1,0 +1,87 @@
+name: CI
+
+# Controls when the action will run.
+on:
+  pull_request:
+
+# Global environment variables
+env:
+  CI: true
+
+# Jobs
+jobs:
+  # Validate PR title
+  validate_pr_title:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        id: lint_pr_title
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: always() && (steps.lint_pr_title.outputs.error_message != null)
+        with:
+          header: pr-title-lint-error
+          message: |
+            Hey there and thank you for opening this pull request! 👋🏼
+
+            We require pull request titles to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) and it looks like your proposed title needs to be adjusted.
+
+            Details:
+
+            ```
+            ${{ steps.lint_pr_title.outputs.error_message }}
+            ```
+      - if: ${{ steps.lint_pr_title.outputs.error_message == null }}
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-title-lint-error
+          delete: true
+  # Set up tests
+  set_up:
+    name: Set up
+    runs-on: ubuntu-latest
+    needs: [validate_pr_title]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: "yarn"
+      - run: yarn install
+  # Lint job
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    needs: [set_up]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: "yarn"
+      - run: yarn install
+      # Lint files
+      - name: Lint files
+        run: yarn lint
+      # Check typescript files
+      - name: Lint ts files
+        run: yarn lint:ts
+  # Tests
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    needs: [set_up]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: "yarn"
+      - run: yarn install
+      # TODO enable when we have tests
+      # - name: Tests
+      #   run: yarn test

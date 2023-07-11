@@ -1,0 +1,46 @@
+name: 🐛 Bug Report
+description: Report an issue to help us improve.
+labels: [Bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
+      placeholder: Bug description
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      description: A clear and concise description of the current behavior.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Impact
+      description: How does the current behavior affect the customer?
+      options:
+        - Pri1 - Urgent
+        - Pri2 - High
+        - Pri3 - Medium
+        - Pri4 - Low
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Describe the steps needed to reproduce the unwanted behavior.
+        If applicable, add screenshots or a screen record to help explain your problem.
+    validations:
+      required: false
