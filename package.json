@@ -23,7 +23,6 @@
     "format:all": "prettier --write \"**/*.{js,ts,tsx,md,mdx,json}\" .",
     "clean": "rimraf dist build .next tsconfig.tsbuildinfo",
     "dev": "next dev -p 3000",
-    "build": "next build",
     "test": "echo \"Not implemented yet\""
   },
   "dependencies": {
