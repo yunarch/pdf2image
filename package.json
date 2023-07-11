@@ -21,7 +21,7 @@
     "lint:ts": "tsc --noEmit",
     "format": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\" .",
     "format:all": "prettier --write \"**/*.{js,ts,tsx,md,mdx,json}\" .",
-    "clean": "rimraf dist build .next tsconfig.tsbuildinfo",
+    "clean": "rimraf dist build out .next tsconfig.tsbuildinfo",
     "dev": "next dev -p 3000",
     "test": "echo \"Not implemented yet\""
   },
