@@ -5,6 +5,7 @@ Convert PDF files to images with ease.
 - [PDF 2 image](#pdf-2-image)
   - [🔗 Requirements](#-requirements)
   - [🚀 Quick Start](#-quick-start)
+  - [🚢 Deploy](#-deploy)
   - [🧹 Linting](#-linting)
   - [📐 Format files](#-format-files)
   - [📝 Conventional Commits](#-conventional-commits)
@@ -32,6 +33,16 @@ yarn install
 ```sh
 yarn dev
 ```
+
+## 🚢 Deploy
+
+This project utilizes GitHub Actions for streamlined deployments. To release a new version, follow these steps:
+
+1. Navigate to the Actions tab on GitHub.
+2. Locate the deployment action and trigger it.
+3. The deployment process will automatically publish the Next.js site to GitHub Pages and generate a new release based on the commits since the last release.
+
+> Note: Deployment is limited to authorized users with the necessary permissions.
 
 ## 🧹 Linting
 
