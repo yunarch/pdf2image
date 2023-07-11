@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   CardActions,
-  CardContent,
   CardHeader,
   LinearProgress,
   Typography,
@@ -27,9 +26,7 @@ const Pdf2ImageFilesQueue = () => {
     >
       {queue.map((element) => (
         <Card key={`file-queue--${element.id}`}>
-          <CardContent>
-            <Typography>{element.file.name}</Typography>
-          </CardContent>
+          <CardHeader title={<Typography>{element.file.name}</Typography>} />
           <CardActions sx={{ display: "block" }}>
             <LinearProgress />
           </CardActions>
@@ -38,7 +35,12 @@ const Pdf2ImageFilesQueue = () => {
       {queueCompleted.map((element) => (
         <Card key={`file-completed--${element.id}`}>
           <CardHeader
-            title={element.file.name}
+            sx={{ "> .MuiCardHeader-content": { overflow: "hidden" } }}
+            title={
+              <Typography sx={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+                {element.file.name}
+              </Typography>
+            }
             action={<Pdf2ImageFilesQueueRemoveBtn element={element} />}
           />
           <CardActions>
