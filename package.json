@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "pdf2image",
-  "version": "1.0.0",
   "license": "MIT",
   "author": {
     "name": "yunarch",
@@ -22,8 +21,7 @@
     "format": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\" .",
     "format:all": "prettier --write \"**/*.{js,ts,tsx,md,mdx,json}\" .",
     "clean": "rimraf dist build out .next tsconfig.tsbuildinfo",
-    "dev": "next dev -p 3000",
-    "test": "echo \"Not implemented yet\""
+    "dev": "next dev -p 3000"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
