@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.codeLens": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "editor.linkedEditing": true,
+  "explorer.sortOrder": "type",
+  "files.trimTrailingWhitespace": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "problems.decorations.enabled": true
+}

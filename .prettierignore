@@ -1,0 +1,10 @@
+**/.changeset/
+**/.yarn/
+**/coverage/
+**/dist/
+**/build/
+**/.next/
+**/.turbo/
+**/android/
+**/ios/
+**/node_modules/

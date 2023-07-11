@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "name": "pdf2image",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "yunarch",
+    "url": "https://github.com/yunarch"
+  },
+  "description": "Application to convert a pdf into image and vice versa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunarch/pdf2image"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "postinstall": "husky install",
+    "lint": "next lint",
+    "lint:ts": "tsc --noEmit",
+    "format": "prettier --check \"**/*.{js,ts,tsx,md,mdx,json}\" .",
+    "format:all": "prettier --write \"**/*.{js,ts,tsx,md,mdx,json}\" .",
+    "clean": "rimraf dist build .next tsconfig.tsbuildinfo",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "test": "echo \"Not implemented yet\""
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/material": "^5.13.7",
+    "jszip": "^3.10.1",
+    "next": "13.4.3",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^2.16.105",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-next": "^13.4.9",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "packageManager": "yarn@3.6.1"
+}

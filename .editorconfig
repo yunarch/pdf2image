@@ -1,0 +1,22 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{js,ts,jsx,tsx,d.ts,json,yml}]
+max_line_length = 80
+end_of_line = lf
+
+[*.{js,jsx,ts,tsx,d.ts}]
+quote_type = double
+semi = true
+trailing_comma = es5
+arrow_parens = always
