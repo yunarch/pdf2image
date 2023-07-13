@@ -37,17 +37,18 @@ const Pdf2ImageAddFilesModal = ({
       <DialogTitle>Image Resolution</DialogTitle>
       <DialogContent>
         <Typography>
-          The quality is the value of 0.1 to 1 that the images extracted from
-          the PDF will have. The higher the quality, the greater the weight in
-          the image. We recommend a value from 0.8 to 1 if you want to edit the
-          image later (for example to crop), if you want to upload the image
-          directly we recommend a value of 0.1.
+          The quality parameter determines the value of image quality when
+          extracting images from the PDF, ranging from 0.1 to 1. A higher
+          quality value results in a larger image file size. For editing
+          purposes, such as cropping, we recommend a value between 0.8 and 1.
+          However, if you intend to directly use (e.g upload) the image, a value
+          of 0.1 is recommended.
         </Typography>
         <Typography mt="16px">
-          The scale value is the value to expand the PDF and extract the image
-          in that resolution, the higher the scale the greater the weight in the
-          image, but the image quality will be better. We recommend a value of
-          3.
+          The scale parameter determines the resolution at which the PDF is
+          expanded and the image is extracted. A higher scale value increases
+          the image size, but (might) enhances its quality. We recommend using a
+          scale value of 3 for optimal results.
         </Typography>
         <Box display="flex" alignItems="center" mt="30px" gap="16px">
           <TextField
