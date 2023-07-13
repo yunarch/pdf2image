@@ -68,6 +68,6 @@ export function canDownloadAllQueue(
  * @returns a uid string.
  */
 export default function generateUID() {
-  const randomId = Math.random().toString(36).substr(2, 9);
+  const randomId = Math.random().toString(36).substring(2, 9);
   return `_${randomId}`;
 }
