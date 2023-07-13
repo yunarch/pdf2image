@@ -9,7 +9,7 @@ pdfLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/
  * @param {any} file the file.
  * @param {number} quality the quality.
  * @param {number} scale the scale.
- * @returns
+ * @returns A Promise that resolves to an object containing the ID, file, and extracted images.
  */
 export async function pdf2image(id, file, quality, scale) {
   const result = { id, file, pages: [] };
