@@ -5,7 +5,7 @@
 
 Simple web app that allows you to convert PDF files to images and images to PDF.
 
-> If you find this application useful, you could [leave a star](https://github.com/yunarch/pdf2image/stargazers) on the GitHub repository. If you have any feature requests or would like to report an issue, please don't hesitate to [open a new issue](https://github.com/yunarch/pdf2image/issues).
+> If you find this application useful, you could leave a star on the GitHub repository. If you have any feature requests or would like to report an issue, please don't hesitate to [open a new issue](https://github.com/yunarch/pdf2image/issues).
 
 - [PDF 2 image](#pdf-2-image)
   - [🔗 Requirements](#-requirements)
