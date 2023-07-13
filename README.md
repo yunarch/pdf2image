@@ -1,5 +1,8 @@
 # PDF 2 image
 
+[![CodeQL](https://github.com/yunarch/pdf2image/workflows/CodeQL/badge.svg)](https://github.com/yunarch/pdf2image/actions?query=workflow%3ACodeQL)
+[![Deploy & Release](https://github.com/yunarch/pdf2image/actions/workflows/deploy.yml/badge.svg)](https://github.com/yunarch/pdf2image/actions/workflows/deploy.yml)
+
 Convert PDF files to images with ease.
 
 - [PDF 2 image](#pdf-2-image)
