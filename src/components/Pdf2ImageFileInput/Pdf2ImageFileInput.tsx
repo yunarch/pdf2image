@@ -1,5 +1,5 @@
-import { usePdf2ImageContext } from "../../context";
-import { useAddFilesToQueue } from "../../hooks";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
+import { useAddFilesToQueue } from "../../hooks/useAddFilesToQueue";
 
 // Component
 const Pdf2ImageFileInput = () => {

@@ -1,7 +1,9 @@
-import { Box, MenuItem, Select, type SelectChangeEvent } from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
+import Box from "@mui/material/Box";
+import MenuItem from "@mui/material/MenuItem";
+import Select, { type SelectChangeEvent } from "@mui/material/Select";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
 import type { ImageType } from "../../types";
-import { getImageTypes, isPdf2Image } from "../../utils";
+import { getImageTypes, isPdf2Image } from "../../utils/helpers";
 
 // Component
 const Pdf2ImageImageTypeSelect = () => {

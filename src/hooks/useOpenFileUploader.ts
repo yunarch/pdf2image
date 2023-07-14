@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { usePdf2ImageContext } from "../context";
+import { usePdf2ImageContext } from "../context/Pdf2ImageContextProvider";
 
 /**
  * Generate a function to open a native browser file uploader.

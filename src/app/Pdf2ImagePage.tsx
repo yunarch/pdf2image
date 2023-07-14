@@ -7,7 +7,7 @@ import { Pdf2ImageFileInput } from "../components/Pdf2ImageFileInput";
 import { Pdf2ImageFilesQueue } from "../components/Pdf2ImageFilesQueue";
 import { Pdf2ImageImageTypeSelect } from "../components/Pdf2ImageImageTypeSelect";
 import { Pdf2ImageModeSelector } from "../components/Pdf2ImageModeSelector";
-import { Pdf2ImageContextProvider } from "../context";
+import { Pdf2ImageContextProvider } from "../context/Pdf2ImageContextProvider";
 
 export default function Pdf2ImagePage() {
   return (

@@ -1,6 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
-import { IconButton } from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
+import IconButton from "@mui/material/IconButton";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
 import type { QueueCompletedFileType } from "../../types";
 
 // Prop types

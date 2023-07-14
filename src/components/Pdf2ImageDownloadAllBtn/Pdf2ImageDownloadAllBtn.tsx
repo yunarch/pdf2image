@@ -1,6 +1,8 @@
-import { Button, CircularProgress } from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
-import { canDownloadAllQueue, zipFiles } from "../../utils";
+import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
+import { canDownloadAllQueue } from "../../utils/helpers";
+import { zipFiles } from "../../utils/zipFiles";
 
 // Component
 const Pdf2ImageDownloadAllBtn = () => {

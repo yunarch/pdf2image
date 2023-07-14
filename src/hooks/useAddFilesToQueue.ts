@@ -1,9 +1,10 @@
 import type { SyntheticEvent } from "react";
 import { useCallback } from "react";
-import { usePdf2ImageContext } from "../context";
+import { usePdf2ImageContext } from "../context/Pdf2ImageContextProvider";
 import type { QueueCompletedFileType, QueueFileType } from "../types";
-import { image2pdf, isImage2Pdf, isPdf2Image, pdf2image } from "../utils";
-import generateUID from "../utils/helpers";
+import { generateUID, isImage2Pdf, isPdf2Image } from "../utils/helpers";
+import { image2pdf } from "../utils/image2pdf";
+import { pdf2image } from "../utils/pdf2image";
 
 /**
  * Generate a function to generate a file
