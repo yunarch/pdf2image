@@ -1,8 +1,8 @@
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import { useState } from "react";
-import { usePdf2ImageContext } from "../../context";
-import { useOpenFileUploader } from "../../hooks";
-import { isPdf2Image } from "../../utils";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
+import { useOpenFileUploader } from "../../hooks/useOpenFileUploader";
+import { isPdf2Image } from "../../utils/helpers";
 import Pdf2ImageAddFilesModal from "./Pdf2ImageAddFilesModal";
 
 // Component

@@ -1,6 +1,6 @@
-import { Button } from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
-import { useClearQueue } from "../../hooks";
+import Button from "@mui/material/Button";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
+import { useClearQueue } from "../../hooks/useClearQueue";
 
 // Component
 const Pdf2ImageClearQueueBtn = () => {

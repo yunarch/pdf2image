@@ -1,7 +1,8 @@
 import { Button } from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
 import type { QueueCompletedFileType } from "../../types";
-import { isImage2Pdf, isPdf2Image, zipFiles } from "../../utils";
+import { isImage2Pdf, isPdf2Image } from "../../utils/helpers";
+import { zipFiles } from "../../utils/zipFiles";
 
 // Prop types
 type Pdf2ImageFilesQueueDownloadBtnProps = {

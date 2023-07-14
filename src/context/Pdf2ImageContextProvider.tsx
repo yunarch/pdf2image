@@ -1,12 +1,12 @@
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from "react";
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useContext, useMemo, useRef, useState } from "react";
 import type {
   ImageType,
   ModesType,
   QueueCompletedFileType,
   QueueFileType,
 } from "../types";
-import { IMAGE_TYPES, MODES } from "../utils";
+import { IMAGE_TYPES, MODES } from "../utils/helpers";
 
 // Create context
 type ContextProps = {
@@ -29,12 +29,10 @@ type ContextProps = {
 const Pdf2ImageContext = createContext<ContextProps | undefined>(undefined);
 
 // Context provider
-type Pdf2ImageContextProviderProps = {
+type Props = {
   children: ReactNode;
 };
-const Pdf2ImageContextProvider = ({
-  children,
-}: Pdf2ImageContextProviderProps) => {
+const Pdf2ImageContextProvider = ({ children }: Props) => {
   const fileUploadRef = useRef<HTMLInputElement>(null);
   const [queue, setQueue] = useState<QueueFileType[]>([]);
   const [queueCompleted, setQueueCompleted] = useState<
@@ -47,23 +45,26 @@ const Pdf2ImageContextProvider = ({
   const [isLoading, setIsLoading] = useState(false);
 
   // Create context value
-  const contextValue: ContextProps = {
-    fileUploadRef,
-    queue,
-    setQueue,
-    queueCompleted,
-    setQueueCompleted,
-    activeMode,
-    setActiveMode,
-    imageType,
-    setImageType,
-    scale,
-    setScale,
-    quality,
-    setQuality,
-    isLoading,
-    setIsLoading,
-  };
+  const contextValue: ContextProps = useMemo(
+    () => ({
+      fileUploadRef,
+      queue,
+      setQueue,
+      queueCompleted,
+      setQueueCompleted,
+      activeMode,
+      setActiveMode,
+      imageType,
+      setImageType,
+      scale,
+      setScale,
+      quality,
+      setQuality,
+      isLoading,
+      setIsLoading,
+    }),
+    [activeMode, imageType, isLoading, quality, queue, queueCompleted, scale]
+  );
 
   // Render
   return (

@@ -1,12 +1,10 @@
-import {
-  Box,
-  Card,
-  CardActions,
-  CardHeader,
-  LinearProgress,
-  Typography,
-} from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardHeader from "@mui/material/CardHeader";
+import LinearProgress from "@mui/material/LinearProgress";
+import Typography from "@mui/material/Typography";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
 import Pdf2ImageFilesQueueDownloadBtn from "./Pdf2ImageFilesQueueDownloadBtn";
 import Pdf2ImageFilesQueueRemoveBtn from "./Pdf2ImageFilesQueueRemoveBtn";
 

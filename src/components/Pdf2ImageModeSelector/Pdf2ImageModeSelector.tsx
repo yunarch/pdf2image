@@ -1,8 +1,8 @@
 import { Button, ButtonGroup } from "@mui/material";
-import { usePdf2ImageContext } from "../../context";
-import { useClearQueue } from "../../hooks";
+import { usePdf2ImageContext } from "../../context/Pdf2ImageContextProvider";
+import { useClearQueue } from "../../hooks/useClearQueue";
 import type { ModesType } from "../../types";
-import { MODES } from "../../utils";
+import { MODES } from "../../utils/helpers";
 
 // Component
 const Pdf2ImageModeSelector = () => {
