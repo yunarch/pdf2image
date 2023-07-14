@@ -3,6 +3,8 @@ import { PDFDocument } from "pdf-lib";
 /**
  * Converts an image file to a PDF document.
  *
+ * TODO this should be run in a web worker as if a big image is used will block the main thread.
+ *
  * @param id - The ID of the converted document.
  * @param file - The image file to convert.
  * @returns A promise that resolves to an object containing the converted PDF document information.
