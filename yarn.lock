@@ -453,12 +453,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^17.6.6":
-  version: 17.6.6
-  resolution: "@commitlint/config-conventional@npm:17.6.6"
+"@commitlint/config-conventional@npm:^17.6.7":
+  version: 17.6.7
+  resolution: "@commitlint/config-conventional@npm:17.6.7"
   dependencies:
     conventional-changelog-conventionalcommits: ^5.0.0
-  checksum: 1f0c1288404caf9565ed3dc186f67f4c84197a3c5a3d422e02a8442b26a798da3b524c48ddaf195d5121577323fc37b68c5efc53dbca7f0004140e328f941e90
+  checksum: dc81c288e9996a14df424328a5d4e0d04de3e55032c4cc8ec768d61c276339932b18c10c3ad0062bb27ca7673b4d709d715f0a58a59523bc063f24b1ca3dbd68
   languageName: node
   linkType: hard
 
@@ -6788,7 +6788,7 @@ __metadata:
   resolution: "pdf2image@workspace:."
   dependencies:
     "@commitlint/cli": ^17.6.6
-    "@commitlint/config-conventional": ^17.6.6
+    "@commitlint/config-conventional": ^17.6.7
     "@emotion/react": ^11.11.1
     "@emotion/styled": ^11.11.0
     "@mui/icons-material": ^5.14.0
