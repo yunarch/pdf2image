@@ -453,12 +453,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^17.6.6":
-  version: 17.6.6
-  resolution: "@commitlint/config-conventional@npm:17.6.6"
+"@commitlint/config-conventional@npm:^17.7.0":
+  version: 17.7.0
+  resolution: "@commitlint/config-conventional@npm:17.7.0"
   dependencies:
-    conventional-changelog-conventionalcommits: ^5.0.0
-  checksum: 1f0c1288404caf9565ed3dc186f67f4c84197a3c5a3d422e02a8442b26a798da3b524c48ddaf195d5121577323fc37b68c5efc53dbca7f0004140e328f941e90
+    conventional-changelog-conventionalcommits: ^6.1.0
+  checksum: 582a087464a8e6f96deefe53da4761c75101eb657cc987fb2bfc50c4eeb7a5d9359b48c8084b67bdedaa2234f641f90aae38a4e8afb21a0f345005f2eee0f3cd
   languageName: node
   linkType: hard
 
@@ -2936,14 +2936,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "conventional-changelog-conventionalcommits@npm:5.0.0"
+"conventional-changelog-conventionalcommits@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "conventional-changelog-conventionalcommits@npm:6.1.0"
   dependencies:
     compare-func: ^2.0.0
-    lodash: ^4.17.15
-    q: ^1.5.1
-  checksum: 02cc9313b44953332e9d45833615675cbc4d0f4129b27ea7218f8f4fc2f35124748725969c0cb3dc645713d19684540b87c5af25bd17ce3dccd7ef4e05e42442
+  checksum: b313f5c0160d109f58d976566e1331ede3a25ab19fbf43f86763b280659195de00a68551f7f3930bf1cbf39a5e707d94f2a25b79996e59043fa9ee0bed68a79f
   languageName: node
   linkType: hard
 
@@ -6788,7 +6786,7 @@ __metadata:
   resolution: "pdf2image@workspace:."
   dependencies:
     "@commitlint/cli": ^17.6.6
-    "@commitlint/config-conventional": ^17.6.6
+    "@commitlint/config-conventional": ^17.7.0
     "@emotion/react": ^11.11.1
     "@emotion/styled": ^11.11.0
     "@mui/icons-material": ^5.14.0
