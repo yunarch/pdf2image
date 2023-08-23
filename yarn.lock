@@ -1561,9 +1561,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@testing-library/jest-dom@npm:6.0.0"
+"@testing-library/jest-dom@npm:^6.1.1":
+  version: 6.1.1
+  resolution: "@testing-library/jest-dom@npm:6.1.1"
   dependencies:
     "@adobe/css-tools": ^4.0.1
     "@babel/runtime": ^7.9.2
@@ -1587,7 +1587,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: dd5a7ff79dad99b08195cab8d7b818b3de0d02f6c84b5d28d5dbca265ceb867931a0ff79da2279a2d476db1cdafb81c14255d898f0bd1ace9d0b36896368cf96
+  checksum: a8286d47547da96b569fc708615aa1795b4e41739c18e4ca7d604feaabc45ebfbc0551507b88e479745f800af3e6727526dbbc8ebdc3e49e4c22cbcbae6462f2
   languageName: node
   linkType: hard
 
@@ -6576,7 +6576,7 @@ __metadata:
     "@emotion/styled": ^11.11.0
     "@mui/icons-material": ^5.14.3
     "@mui/material": ^5.14.5
-    "@testing-library/jest-dom": ^6.0.0
+    "@testing-library/jest-dom": ^6.1.1
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.4.3
     "@types/react": ^18.2.20
