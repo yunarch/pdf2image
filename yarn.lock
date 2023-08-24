@@ -12,7 +12,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/css-tools@npm:^4.0.1":
+"@adobe/css-tools@npm:^4.3.0":
   version: 4.3.1
   resolution: "@adobe/css-tools@npm:4.3.1"
   checksum: 05672719b544cc0c21ae3ed0eb6349bf458e9d09457578eeeb07cf0f696469ac6417e9c9be1b129e5d6a18098a061c1db55b2275591760ef30a79822436fcbfa
@@ -1561,11 +1561,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@testing-library/jest-dom@npm:6.0.0"
+"@testing-library/jest-dom@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "@testing-library/jest-dom@npm:6.1.2"
   dependencies:
-    "@adobe/css-tools": ^4.0.1
+    "@adobe/css-tools": ^4.3.0
     "@babel/runtime": ^7.9.2
     aria-query: ^5.0.0
     chalk: ^3.0.0
@@ -1587,7 +1587,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: dd5a7ff79dad99b08195cab8d7b818b3de0d02f6c84b5d28d5dbca265ceb867931a0ff79da2279a2d476db1cdafb81c14255d898f0bd1ace9d0b36896368cf96
+  checksum: 3d9292abd4a43596d685e5e9b163df7fc386f4938e8b09388514041e785fb969382d94a61757bd96e0b852065800f4a856fad155b71d642c67b36758b7d2902f
   languageName: node
   linkType: hard
 
@@ -6576,7 +6576,7 @@ __metadata:
     "@emotion/styled": ^11.11.0
     "@mui/icons-material": ^5.14.3
     "@mui/material": ^5.14.5
-    "@testing-library/jest-dom": ^6.0.0
+    "@testing-library/jest-dom": ^6.1.2
     "@testing-library/react": ^14.0.0
     "@testing-library/user-event": ^14.4.3
     "@types/react": ^18.2.20
