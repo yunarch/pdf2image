@@ -1,7 +1,0 @@
-**/out/
-**/dist/
-**/build/
-**/tests/__snapshots/
-**/node_modules/
-**/.next
-**/.turbo
