@@ -11,12 +11,6 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# next.js
-.next/
-out/
-build
-tsconfig.tsbuildinfo
-
 # misc
 .DS_Store
 *.pem
@@ -29,13 +23,6 @@ yarn-error.log*
 .pnpm-debug.log*
 logs
 *.log
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.envrc.local
 
 # turbo
 .turbo
@@ -50,26 +37,53 @@ dist/
 *.mobileprovision
 *.orig.*
 web-build/
+expo-env.d.ts
 
 # yarn 2
 .pnp.*
 .yarn/*
-# !.yarn/cache
+!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
 
-# Env files
+# env files
 .env*
 !.env.example
+.dockerfile.env
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc.local
 
 # Optional eslint cache
 .eslintcache
+.eslint-config-inspector
 
 # Runtime data
 pids
 *.pid
 *.seed
 *.pid.lock
+
+# vercel
+.vercel
+
+# next.js
+.next/
+out/
+build
+
+# SWC
+.swc
+
+# typescript
+*.tsbuildinfo
+
+# MSW
+mockServiceWorker.js

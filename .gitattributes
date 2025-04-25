@@ -1,4 +1,5 @@
 * text=auto eol=lf
+*.lockb binary diff=lockb
 
 /.yarn/releases/** binary
 /.yarn/plugins/** binary

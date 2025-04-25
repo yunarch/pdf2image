@@ -1,16 +1,22 @@
 {
+  // Formatter
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.oxc": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.removeUnusedImports": "never",
+    "source.organizeImports": "never"
+  },
+  "files.trimTrailingWhitespace": true,
+
+  // IDE options
+  "explorer.sortOrder": "type",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "editor.codeLens": true,
-  "typescript.referencesCodeLens.enabled": true,
-  "editor.linkedEditing": true,
-  "explorer.sortOrder": "type",
-  "files.trimTrailingWhitespace": true,
   "workbench.editor.highlightModifiedTabs": true,
-  "problems.decorations.enabled": true
+  "problems.decorations.enabled": true,
 }

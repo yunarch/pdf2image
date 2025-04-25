@@ -1,15 +1,13 @@
-#!/usr/bin/env bash
-
 function changed {
     git diff --name-only HEAD@{1} HEAD | grep "^$1" >/dev/null 2>&1
 }
 
-echo 'Checking for changes in yarn.lock...'
+echo "\u001B[34m🔍 Checking for changes in lock file...\u001B[0m"
 
-if changed 'yarn.lock'; then
-    echo "📦 yarn.lock changed. Run yarn install to bring your dependencies up to date."
-    yarn install
+if changed "bun.lock"; then
+    echo "\u001B[33m📦 The lock file has changed. Running \u001B[35minstall\u001B[33m to bring your dependencies up to date.\u001B[0m"
+    bun install
 fi
 
-echo 'You are up to date :)'
+echo "\u001B[32m✅ You are up to date.\u001B[0m"
 exit 0
