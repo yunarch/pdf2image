@@ -1,25 +1,30 @@
-export type ModeType = "pdf2image" | "image2pdf";
-
-export type ModesType = {
+export type ModeType = 'pdf2image' | 'image2pdf';
+export type Mode = {
   type: ModeType;
   fileTypes: string;
   text: string;
 };
 
-export type ImageType = "jpeg";
-
-export type ImageTypes = {
-  [k: string]: ImageType;
-};
-
-export type QueueFileType = { id: string; file: File };
-
-// ! FIXME it should not use any type
-export type QueueCompletedFileType = QueueFileType & {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pages?: any[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  baseName?: any;
+export interface QueueItem {
+  id: string;
+  file: File;
+}
+export interface QueueCompletedItem<T> extends QueueItem {
+  pages?: T[];
+  baseName?: string;
   blob?: Blob;
   imageURL?: string;
-};
+}
+
+export const MODES: Mode[] = [
+  {
+    type: 'pdf2image',
+    fileTypes: 'application/pdf',
+    text: 'PDF to Image',
+  },
+  {
+    type: 'image2pdf',
+    fileTypes: 'image/png, image/jpeg',
+    text: 'Image to PDF',
+  },
+] as const;
