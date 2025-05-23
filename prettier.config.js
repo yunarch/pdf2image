@@ -1,7 +1,7 @@
-import prettierConfig from "@yunarch/config-web/prettier";
+import prettierConfig from '@yunarch/config-web/prettier';
 
-const config = {
+/** @type {import("prettier").Options} */
+export default {
   ...prettierConfig,
+  plugins: ['prettier-plugin-tailwindcss'],
 };
-
-export default config;

@@ -1,8 +1,16 @@
 import { config } from '@yunarch/config-web/eslint';
 
-export default config({
-  typescript: {
-    tsconfigPath: './tsconfig.json',
+export default config(
+  {
+    typescript: {
+      tsconfigPath: './tsconfig.json',
+    },
+    react: true,
   },
-  react: true,
-});
+  {
+    rules: {
+      'unicorn/no-null': 'off',
+      'react-refresh/only-export-components': 'off',
+    },
+  }
+);

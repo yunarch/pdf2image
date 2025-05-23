@@ -18,5 +18,5 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "workbench.editor.highlightModifiedTabs": true,
-  "problems.decorations.enabled": true,
+  "problems.decorations.enabled": true
 }
