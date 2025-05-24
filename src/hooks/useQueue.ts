@@ -1,10 +1,10 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useRef, useState, type RefObject } from 'react';
 
 interface QueueMethods<T> {
   /**
    * The array of items in the queue.
    */
-  queue: T[];
+  list: RefObject<T[]>;
   /**
    * The number of items in the queue.
    */
@@ -54,59 +54,54 @@ interface QueueMethods<T> {
 }
 
 /**
- * Hook to manage a queue of items.
+ * Hook to manage a queue of items using refs for immediate access in async contexts.
  *
  * @param initialValue - The initial value of the queue. Defaults to an empty array.
  * @returns An object containing methods to manipulate the queue and its properties.
  */
 export function useQueue<T>(initialValue: T[] = []): QueueMethods<T> {
-  const [queue, setQueue] = useState(initialValue);
+  const listRef = useRef<T[]>([...initialValue]);
+
+  // Update re-render helpers
+  const [, forceRender] = useState(0);
+  const update = () => {
+    forceRender((v) => v + 1);
+  };
 
   // Methods
   const push = useCallback((...items: T[]) => {
-    setQueue((q) => [...q, ...items]);
+    listRef.current.push(...items);
+    update();
   }, []);
   const pop = useCallback(() => {
-    let removedElement;
-    setQueue((q) => {
-      if (q.length === 0) return q;
-      removedElement = q.at(-1);
-      return q.slice(0, -1);
-    });
-    return removedElement;
+    const item = listRef.current.pop();
+    update();
+    return item;
   }, []);
   const shift = useCallback(() => {
-    let removedElement;
-    setQueue((q) => {
-      if (q.length === 0) return q;
-      removedElement = q.at(0);
-      return q.slice(1);
-    });
-    return removedElement;
+    const item = listRef.current.shift();
+    update();
+    return item;
   }, []);
   const splice = useCallback(
     (start: number, deleteCount: number, ...items: T[]) => {
-      let removedElements: T[] = [];
-      setQueue((q) => {
-        if (q.length === 0) return q;
-        const arr = [...q];
-        removedElements = arr.splice(start, deleteCount, ...items);
-        return arr;
-      });
-      return removedElements;
+      const removed = listRef.current.splice(start, deleteCount, ...items);
+      update();
+      return removed;
     },
     []
   );
   const clear = useCallback(() => {
-    setQueue([]);
+    listRef.current = [];
+    update();
   }, []);
 
   // Return the queue methods and properties
   return {
-    queue,
-    length: queue.length,
-    first: queue.at(0),
-    last: queue.at(-1),
+    list: listRef,
+    length: listRef.current.length,
+    first: listRef.current.at(0),
+    last: listRef.current.at(-1),
     push,
     pop,
     shift,
