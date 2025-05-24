@@ -15,7 +15,7 @@
   "type": "module",
   "scripts": {
     "postinstall": "husky",
-    "lint": "bun-run-all lint:code lint:code -t",
+    "lint": "bun-run-all lint:code lint:ts -t",
     "lint:code": "eslint . --cache --cache-strategy content",
     "lint:ts": "tsc --noEmit",
     "format": "prettier . --check",
