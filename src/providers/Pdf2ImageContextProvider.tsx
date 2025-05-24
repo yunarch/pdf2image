@@ -10,13 +10,9 @@ import {
 // Create context
 type ContextProps = {
   queue: ReturnType<typeof useQueue<QueueItem>>;
-  queueCompleted: ReturnType<typeof useQueue<QueueCompletedItem<unknown>>>;
+  queueCompleted: ReturnType<typeof useQueue<QueueCompletedItem>>;
   activeMode: Mode;
   setActiveMode: (mode: Mode) => void;
-  quality: number;
-  setQuality: (quality: number) => void;
-  scale: number;
-  setScale: (scale: number) => void;
 };
 const Pdf2ImageContext = createContext<ContextProps | undefined>(undefined);
 
@@ -27,10 +23,8 @@ export const Pdf2ImageContextProvider = ({
   children: ReactNode;
 }) => {
   const queue = useQueue<QueueItem>([]);
-  const queueCompleted = useQueue<QueueCompletedItem<unknown>>([]);
+  const queueCompleted = useQueue<QueueCompletedItem>([]);
   const [activeMode, setActiveMode] = useState<Mode>(MODES[0]);
-  const [quality, setQuality] = useState(0.1);
-  const [scale, setScale] = useState(3);
 
   // Create context value
   const contextValue: ContextProps = useMemo(
@@ -45,12 +39,8 @@ export const Pdf2ImageContextProvider = ({
         }
         setActiveMode(mode);
       },
-      quality,
-      setQuality,
-      scale,
-      setScale,
     }),
-    [activeMode, quality, queue, queueCompleted, scale]
+    [activeMode, queue, queueCompleted]
   );
 
   // Render
