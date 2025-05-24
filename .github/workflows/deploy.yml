@@ -54,7 +54,7 @@ jobs:
         uses: actions/checkout@v4
       - name: 📝 Generate changelog
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: TriPSs/conventional-changelog-action@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-file: 'false'
