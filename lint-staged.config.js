@@ -2,5 +2,9 @@
  * @type {import('lint-staged').Configuration}
  */
 export default {
-  '*': [() => 'bun run format:all', () => 'bun run lint'],
+  '*': (stagedFiles) => [
+    `eslint ${stagedFiles.join(' ')}`,
+    'bun run lint:ts',
+    `bun run format:all`,
+  ],
 };
