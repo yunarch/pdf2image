@@ -36,7 +36,7 @@
     "tailwind-merge": "3.3.0"
   },
   "devDependencies": {
-    "@yunarch/config-web": "0.2.5",
+    "@yunarch/config-web": "0.2.6",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "husky": "9.1.7",
