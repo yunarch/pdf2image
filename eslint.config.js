@@ -9,7 +9,6 @@ export default config(
   },
   {
     rules: {
-      'unicorn/no-null': 'off',
       'react-refresh/only-export-components': 'off',
     },
   }
