@@ -1,1 +1,1 @@
-import '@yunarch/config-web/reset.d.ts';
+import '@yunarch/config-web/ts-reset.d.ts';
