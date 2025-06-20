@@ -21,13 +21,13 @@ To get started follow these steps:
 1. Install the dependencies required for both the mobile app and the web admin app by running the following command in the root directory of the repository:
 
 ```sh
-yarn install
+bun install
 ```
 
 2.  Start the development server
 
 ```sh
-yarn dev
+bun dev
 ```
 
 ## 📝 Conventional Commits
