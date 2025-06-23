@@ -41,16 +41,16 @@
     "@commitlint/config-conventional": "19.8.1",
     "husky": "9.1.7",
     "lint-staged": "16.1.2",
-    "prettier": "3.5.3",
+    "prettier": "3.6.0",
     "prettier-plugin-tailwindcss": "0.6.13",
     "eslint": "9.29.0",
     "rimraf": "6.0.1",
     "typescript": "5.8.3",
     "vite": "6.3.5",
-    "@vitejs/plugin-react": "4.5.2",
+    "@vitejs/plugin-react": "4.6.0",
     "@tailwindcss/vite": "4.1.10",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6"
   },
-  "packageManager": "bun@1.2.16"
+  "packageManager": "bun@1.2.17"
 }
