@@ -3,6 +3,11 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
+  // Linters
+  "biome.requireConfiguration": true,
+  "oxc.requireConfig": true,
+  "oxc.unusedDisableDirectives": "warn",
+
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
