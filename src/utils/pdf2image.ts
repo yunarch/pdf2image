@@ -40,7 +40,7 @@ export async function pdf2image(
     const viewport = page.getViewport({ scale });
     canvas.height = viewport.height;
     canvas.width = viewport.width;
-    const renderContext = { canvasContext: ctx, viewport };
+    const renderContext = { canvas, canvasContext: ctx, viewport };
     await page.render(renderContext).promise;
     result.pages.push({
       baseName: `${file.name.replace(/\.[^.]*$/, '')}-page-${i}`,
