@@ -133,7 +133,7 @@ export async function downloadAllCombineImages(
     }
   }
   const pdfBytes = await pdf.save();
-  const imageUrl = URL.createObjectURL(new Blob([pdfBytes]));
+  const imageUrl = URL.createObjectURL(new Blob([new Uint8Array(pdfBytes)]));
   const link = document.createElement('a');
   link.download = `${name}_combined.pdf`;
   link.href = imageUrl;

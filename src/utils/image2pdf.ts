@@ -23,7 +23,7 @@ export async function image2pdf(
   const page = pdfDoc.addPage([imageDims.width, imageDims.height]);
   page.drawImage(image);
   const pdfBytes = await pdfDoc.save();
-  const blob = new Blob([pdfBytes]);
+  const blob = new Blob([new Uint8Array(pdfBytes)]);
   return {
     type: 'image2pdf',
     id,
