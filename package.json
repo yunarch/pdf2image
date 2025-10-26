@@ -46,7 +46,7 @@
     "eslint": "9.38.0",
     "rimraf": "6.0.1",
     "typescript": "5.9.3",
-    "vite": "7.1.11",
+    "vite": "7.1.12",
     "@vitejs/plugin-react": "5.0.4",
     "@tailwindcss/vite": "4.1.15",
     "@types/react": "19.2.2",
