@@ -7,7 +7,6 @@ export const HeaderButtons = () => {
   const [theme, setTheme] = useState(() => {
     return document.documentElement.dataset.theme ?? 'dark';
   });
-
   return (
     <div className="flex gap-2">
       <a

@@ -8,6 +8,7 @@ import { AddFilesModal } from './AddFilesModal';
 
 export const AddFilesBtn = () => {
   const { activeMode, queue, queueCompleted } = usePdf2ImageContext();
+  const queueListRef = useRef(queue.list);
   const fileUploadRef = useRef<HTMLInputElement>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -20,6 +21,20 @@ export const AddFilesBtn = () => {
   };
 
   // Handlers
+  const onLoadingItem = (loadingItem: QueueItem) => {
+    queueListRef.current.push(loadingItem);
+    queue.push(loadingItem);
+  };
+  const onLoadedItem = (loadedItem: QueueCompletedItem) => {
+    const queueItemIndex = queueListRef.current.findIndex(
+      (item) => item.id === loadedItem.id
+    );
+    if (queueItemIndex !== -1) {
+      queueListRef.current.splice(queueItemIndex, 1);
+      queue.splice(queueItemIndex, 1);
+      queueCompleted.push(loadedItem);
+    }
+  };
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const tmpFiles = e.target.files;
     if (!tmpFiles) return;
@@ -28,7 +43,7 @@ export const AddFilesBtn = () => {
       if (activeMode.fileTypes.includes(file.type)) {
         const id = `_${Math.random().toString(36).slice(2, 9)}`;
         const queueItem: QueueItem = { id, file };
-        queue.push(queueItem);
+        onLoadingItem(queueItem);
         switch (activeMode.type) {
           case 'pdf2image': {
             promises.push(pdf2image(queueItem, { quality, scale }));
@@ -47,13 +62,7 @@ export const AddFilesBtn = () => {
     for (const res of result) {
       if (res.status === 'fulfilled') {
         const loadedItem = res.value;
-        const queueItemIndex = queue.list.findIndex(
-          (item) => item.id === loadedItem.id
-        );
-        if (queueItemIndex !== -1) {
-          queue.splice(queueItemIndex, 1);
-          queueCompleted.push(loadedItem);
-        }
+        onLoadedItem(loadedItem);
       }
     }
   };
