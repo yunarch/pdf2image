@@ -49,7 +49,7 @@ export const Pdf2ImageContextProvider = ({
 
 /**
  * @returns the context value of the Pdf2ImageContext.
- * @throws an error if the context is not used within a Pdf2ImageContextProvider.
+ * @throws {Error} if the context is not used within a Pdf2ImageContextProvider.
  */
 export function usePdf2ImageContext() {
   const context = use(Pdf2ImageContext);

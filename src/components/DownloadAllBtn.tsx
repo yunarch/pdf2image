@@ -24,7 +24,7 @@ export const DownloadAllBtn = () => {
       onClick={async () => {
         try {
           setIsLoading(true);
-          await downloadAll(activeMode.type, queueCompleted.list.current);
+          await downloadAll(activeMode.type, queueCompleted.list);
         } finally {
           setIsLoading(false);
         }

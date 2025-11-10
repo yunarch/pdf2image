@@ -28,29 +28,29 @@
   "dependencies": {
     "jszip": "3.10.1",
     "pdf-lib": "1.17.1",
-    "pdfjs-dist": "5.4.296",
+    "pdfjs-dist": "5.4.394",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "5.5.0",
-    "tailwindcss": "4.1.16",
-    "tailwind-merge": "3.3.1"
+    "tailwindcss": "4.1.17",
+    "tailwind-merge": "3.4.0"
   },
   "devDependencies": {
-    "@yunarch/config-web": "0.5.7",
+    "@yunarch/config-web": "0.5.8",
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "husky": "9.1.7",
     "lint-staged": "16.2.6",
     "prettier": "3.6.2",
     "prettier-plugin-tailwindcss": "0.7.1",
-    "eslint": "9.38.0",
-    "rimraf": "6.0.1",
+    "eslint": "9.39.1",
+    "rimraf": "6.1.0",
     "typescript": "5.9.3",
-    "vite": "7.1.12",
+    "vite": "7.2.2",
     "@vitejs/plugin-react": "5.1.0",
-    "@tailwindcss/vite": "4.1.16",
+    "@tailwindcss/vite": "4.1.17",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2"
   },
-  "packageManager": "bun@1.3.1"
+  "packageManager": "bun@1.3.2"
 }

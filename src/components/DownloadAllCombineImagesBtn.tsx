@@ -28,9 +28,7 @@ export const DownloadAllCombineImagesBtn = () => {
           setIsLoading(true);
           await downloadAllCombineImages(
             activeMode.type,
-            queueCompleted.list.current.filter(
-              (item) => item.type === 'image2pdf'
-            )
+            queueCompleted.list.filter((item) => item.type === 'image2pdf')
           );
         } finally {
           setIsLoading(false);

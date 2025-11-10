@@ -47,7 +47,7 @@ export const AddFilesBtn = () => {
     for (const res of result) {
       if (res.status === 'fulfilled') {
         const loadedItem = res.value;
-        const queueItemIndex = queue.list.current.findIndex(
+        const queueItemIndex = queue.list.findIndex(
           (item) => item.id === loadedItem.id
         );
         if (queueItemIndex !== -1) {

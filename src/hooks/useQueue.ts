@@ -1,10 +1,10 @@
-import { useCallback, useRef, useState, type RefObject } from 'react';
+import { useCallback, useState } from 'react';
 
 interface QueueMethods<T> {
   /**
    * The array of items in the queue.
    */
-  list: RefObject<T[]>;
+  list: T[];
   /**
    * The number of items in the queue.
    */
@@ -60,48 +60,52 @@ interface QueueMethods<T> {
  * @returns An object containing methods to manipulate the queue and its properties.
  */
 export function useQueue<T>(initialValue: T[] = []): QueueMethods<T> {
-  const listRef = useRef<T[]>([...initialValue]);
-
-  // Update re-render helpers
-  const [, forceRender] = useState(0);
-  const update = () => {
-    forceRender((v) => v + 1);
-  };
+  const [list, setList] = useState<T[]>([...initialValue]);
 
   // Methods
   const push = useCallback((...items: T[]) => {
-    listRef.current.push(...items);
-    update();
+    setList((prevList) => [...prevList, ...items]);
   }, []);
   const pop = useCallback(() => {
-    const item = listRef.current.pop();
-    update();
-    return item;
+    let poppedItem: T | undefined;
+    setList((prevList) => {
+      if (prevList.length === 0) return prevList;
+      poppedItem = prevList.at(-1);
+      return prevList.slice(0, -1);
+    });
+    return poppedItem;
   }, []);
   const shift = useCallback(() => {
-    const item = listRef.current.shift();
-    update();
-    return item;
+    let shiftedItem: T | undefined;
+    setList((prevList) => {
+      if (prevList.length === 0) return prevList;
+      shiftedItem = prevList.at(0);
+      return prevList.slice(1);
+    });
+    return shiftedItem;
   }, []);
   const splice = useCallback(
     (start: number, deleteCount: number, ...items: T[]) => {
-      const removed = listRef.current.splice(start, deleteCount, ...items);
-      update();
-      return removed;
+      let deletedItems: T[] = [];
+      setList((prevList) => {
+        const newList = [...prevList];
+        deletedItems = newList.splice(start, deleteCount, ...items);
+        return newList;
+      });
+      return deletedItems;
     },
     []
   );
   const clear = useCallback(() => {
-    listRef.current = [];
-    update();
+    setList([]);
   }, []);
 
   // Return the queue methods and properties
   return {
-    list: listRef,
-    length: listRef.current.length,
-    first: listRef.current.at(0),
-    last: listRef.current.at(-1),
+    list,
+    length: list.length,
+    first: list.at(0),
+    last: list.at(-1),
     push,
     pop,
     shift,

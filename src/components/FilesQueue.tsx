@@ -6,14 +6,14 @@ export const FilesQueue = () => {
   const { queue, queueCompleted } = usePdf2ImageContext();
   return (
     <>
-      {queue.list.current.map((element) => (
+      {queue.list.map((element) => (
         <FilesQueueItem
           key={`file--${element.id}`}
           name={element.file.name}
           isLoading
         />
       ))}
-      {queueCompleted.list.current.map((element, index) => (
+      {queueCompleted.list.map((element, index) => (
         <FilesQueueItem
           key={`file--${element.id}`}
           name={element.file.name}
