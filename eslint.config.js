@@ -5,6 +5,9 @@ export default config(
     typescript: {
       tsconfigPath: './tsconfig.json',
     },
+    import: true,
+    unicorn: true,
+    jsdoc: true,
     react: true,
   },
   {
