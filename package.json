@@ -28,7 +28,7 @@
   "dependencies": {
     "jszip": "3.10.1",
     "pdf-lib": "1.17.1",
-    "pdfjs-dist": "5.4.394",
+    "pdfjs-dist": "5.4.449",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "5.5.0",
